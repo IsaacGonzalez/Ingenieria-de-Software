@@ -1,6 +1,3 @@
-<h1> Ingenieria-de-Software </h1>
-======================
-
 <h2>Proyecto TRAPO</h2>
 
 <h3>Reglas para control de versiones: </h3>
