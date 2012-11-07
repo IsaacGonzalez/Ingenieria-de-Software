@@ -18,15 +18,22 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="/"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+		<div id="pagewrapper">
+			<div id="grailsLogo" role="banner">
+				<a href="${grailsApplication}">
+					<img src="${resource(dir: 'images', file: 'logo_uabc.png')}" alt="Trapo"/>
+					<h1 id="titulo">Proyecto Trapo</span>
+				</a>
+			</div>
 
-		%{-- Aqui va el codigo de las views que lo llamen --}%
-		<!-- este si se va a ver -->
-		<g:layoutBody/>
+			%{-- Aqui va el codigo de las views que lo llamen --}%
+			<!-- este si se va a ver -->
+			<g:layoutBody/>
 
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
-		<r:layoutResources />
+			<div class="footer" role="contentinfo"></div>
+			<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+			<g:javascript library="application"/>
+			<r:layoutResources />
+		</div>		
 	</body>
 </html>

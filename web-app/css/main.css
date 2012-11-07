@@ -45,10 +45,27 @@ body {
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
 	        box-shadow: 0 0 0.3em #255b17;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    		border-radius: 15px 15px 0px 0px;
 }
 
-#grailsLogo {
+#grailsLogo {	
+	-webkit-border-radius: 15px 15px 0px 0px;
+    		border-radius: 15px 15px 0px 0px;
 	background-color: #abbf78;
+}
+#grailsLogo a img{
+
+}
+#titulo{	
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+#titulo a{
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -88,6 +105,9 @@ img {
 }
 
 /* GENERAL */
+#pagewrapper{
+	margin-top: 20px;
+}
 
 #grailsLogo a {
 	display: inline-block;

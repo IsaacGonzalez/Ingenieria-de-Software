@@ -1,4 +1,4 @@
-package prueba_concepto
+package org.trapo
 
 class AvanceContenidosTematicos extends Reporte{
 
