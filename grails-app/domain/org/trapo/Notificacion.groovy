@@ -12,16 +12,7 @@ class Notificacion {
     	descripcion nullable: false
     	planificador nullable: false
 
-    	periodoInicial nullable: false, validator : {
-    		periodoInicial, obj ->
-    		if( periodoInicial < periodoFinal )
-    			return true
-    	}
-
-    	periodoFinal nullable: false, validator : {
-    		periodoFinal, obj ->
-    		if( periodoFinal < Date.now() )
-    			return false
-    	}    	
+    	periodoInicial nullable: false, validator : {return ( it > new Date() )}
+    	periodoFinal nullable: false
     }
 }

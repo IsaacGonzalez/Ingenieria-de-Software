@@ -1,5 +1,6 @@
 import org.trapo.Docente
 import org.trapo.CoordinadorCarrera
+import org.trapo.Administrativo
 
 class BootStrap {
 
@@ -34,6 +35,17 @@ class BootStrap {
     	 )
     	
     	aglay.save()
+
+        def administrativo = new Administrativo(
+            numeroEmpleado: 3,
+            supervisor : null,
+            nombre : "admin",
+            apellidos : "istrativo",
+            contrasena : "123456",
+            puesto : "default"
+        )
+
+        administrativo.save()
 
     }
 

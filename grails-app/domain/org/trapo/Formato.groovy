@@ -10,11 +10,12 @@ class Formato {
     static constraints = {
     	solicitante nullable: false
     	autorizador nullable: false
+        // validator no sirve
     	fechaCreacion nullable: false, validator: {fechaCreacion, obj->
     		if(fechaCreacion < Date.now())
     			return false
     	}
     	estaCompleto nullable: false
-    	estadoAvance nullable: false
+    	estadoAvance nullable: false, range: 0..1
     }
 }

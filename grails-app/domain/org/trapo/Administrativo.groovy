@@ -6,4 +6,8 @@ class Administrativo extends Usuario{
     static constraints = {
     	puesto nullable: false
     }
+
+    String toString(){
+    	this.nombre + " " + this.apellidos
+    }
 }
