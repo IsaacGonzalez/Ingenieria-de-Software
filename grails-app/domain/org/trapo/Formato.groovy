@@ -16,6 +16,6 @@ class Formato {
     			return false
     	}
     	estaCompleto nullable: false
-    	estadoAvance nullable: false, range: 0..1
+    	estadoAvance nullable: false, inlist : [0,1]
     }
 }
