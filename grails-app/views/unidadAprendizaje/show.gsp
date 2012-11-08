@@ -32,6 +32,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${unidadAprendizajeInstance?.nombre}">
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="unidadAprendizaje.nombre.label" default="Nombre" /></span>
+					
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${unidadAprendizajeInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${unidadAprendizajeInstance?.planEducativo}">
+				<li class="fieldcontain">
+					<span id="planEducativo-label" class="property-label"><g:message code="unidadAprendizaje.planEducativo.label" default="Plan Educativo" /></span>
+					
+						<span class="property-value" aria-labelledby="planEducativo-label"><g:link controller="planEducativo" action="show" id="${unidadAprendizajeInstance?.planEducativo?.id}">${unidadAprendizajeInstance?.planEducativo?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

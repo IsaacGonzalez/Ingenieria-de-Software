@@ -8,8 +8,9 @@ class UnidadAprendizaje {
 	PlanEducativo planEducativo	
 
     static constraints = {
-    	clave nullable: false    	
-    	// planEducativo nullable: false
+    	clave nullable: false
+        nombre blank : false    	
+    	planEducativo nullable: false
     }
 
     String toString(){

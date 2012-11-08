@@ -15,6 +15,7 @@ class Usuario {
     	nombre nullable: false
     	apellidos nullable: false
     	supervisor nullable: true
+        // modificar el view
     	contrasena password: true // falta AES
     }
 

@@ -8,11 +8,15 @@ class Notificacion {
 	Administrativo planificador	
 
     static constraints = {
-    	nombre nullable: false
-    	descripcion nullable: false
+    	nombre blank :false
+    	descripcion blank : false
     	planificador nullable: false
 
-    	periodoInicial nullable: false, validator : {return ( it > new Date() )}
-    	periodoFinal nullable: false
+    	periodoInicial nullable: false, validator : {
+            it >= new Date()
+        }
+    	periodoFinal validator: { val, obj ->
+            val?.after(obj.periodoInicial)
+        }
     }
 }

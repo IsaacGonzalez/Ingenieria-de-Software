@@ -26,6 +26,10 @@
 					
 						<g:sortableColumn property="clave" title="${message(code: 'unidadAprendizaje.clave.label', default: 'Clave')}" />
 					
+						<g:sortableColumn property="nombre" title="${message(code: 'unidadAprendizaje.nombre.label', default: 'Nombre')}" />
+					
+						<th><g:message code="unidadAprendizaje.planEducativo.label" default="Plan Educativo" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +37,10 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${unidadAprendizajeInstance.id}">${fieldValue(bean: unidadAprendizajeInstance, field: "clave")}</g:link></td>
+					
+						<td>${fieldValue(bean: unidadAprendizajeInstance, field: "nombre")}</td>
+					
+						<td>${fieldValue(bean: unidadAprendizajeInstance, field: "planEducativo")}</td>
 					
 					</tr>
 				</g:each>

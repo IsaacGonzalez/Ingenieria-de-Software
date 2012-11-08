@@ -1,6 +1,7 @@
 import org.trapo.Docente
 import org.trapo.CoordinadorCarrera
 import org.trapo.Administrativo
+import org.trapo.PlanEducativo
 
 class BootStrap {
 
@@ -46,6 +47,14 @@ class BootStrap {
         )
 
         administrativo.save()
+
+        def planNuevo = new PlanEducativo(
+            nombre : "plan nuevo",
+            planEstudios : "2009-2",
+            coordinador : aglay
+        )       
+
+        planNuevo.save()
 
     }
 
