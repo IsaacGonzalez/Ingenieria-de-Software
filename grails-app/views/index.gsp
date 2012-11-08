@@ -8,7 +8,7 @@
 				background-color: #eee;
 				border: .2em solid #fff;
 				margin: 2em 2em 1em;
-				padding: 1em;
+				padding: 2em;
 				width: 12em;
 				float: left;
 				-moz-box-shadow: 0px 0px 1.25em #ccc;
@@ -107,15 +107,17 @@
 			</ul> --}%
 		</div>
 		<div id="page-body" role="main">
-			<h1>Proyecto <code id="nombreProyecto">TRAPO</code></h1>			
+			%{-- <h1>Proyecto <code id="nombreProyecto">TRAPO</code></h1> --}%
 
 			<div id="controller-list" role="navigation">
-				<h2>Lista de controladores creados:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.name}</g:link></li>
-					</g:each>
-				</ul>
+				%{-- <sec:ifLoggedIn> --}%
+					<h2>Lista de controladores creados:</h2>
+					<ul>
+						<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+							<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.name}</g:link></li>
+						</g:each>
+					</ul>
+				%{-- </sec:ifLoggedIn> --}%
 			</div>
 		</div>
 	</body>

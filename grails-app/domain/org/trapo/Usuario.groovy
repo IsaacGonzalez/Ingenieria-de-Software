@@ -1,5 +1,8 @@
 package org.trapo
 
+import org.security.SecUser
+
+//class Usuario extends SecUser{
 class Usuario {
 
 	int numeroEmpleado

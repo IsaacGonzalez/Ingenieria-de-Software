@@ -22,8 +22,13 @@
 			<div id="grailsLogo" role="banner">
 				<a href="${grailsApplication}">
 					<img src="${resource(dir: 'images', file: 'logo_uabc.png')}" alt="Trapo"/>
-					<h1 id="titulo">Proyecto Trapo</span>
+					%{-- <h1 id="titulo">Proyecto Trapo</span> --}%
 				</a>
+				<p id="infoUsuario">
+					<sec:ifLoggedIn>
+						Bienvenido <sec:username/>
+					</sec:ifLoggedIn>
+				</p>
 			</div>
 
 			%{-- Aqui va el codigo de las views que lo llamen --}%

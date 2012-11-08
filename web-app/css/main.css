@@ -67,6 +67,12 @@ body {
 	font-size: 24px;
 	font-weight: bold;
 }
+#infoUsuario{
+	display:inline;
+	margin: 0px 460px;
+	font-weight: bold;
+	color: #808e59;
+}
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,

@@ -3,6 +3,10 @@ import org.trapo.CoordinadorCarrera
 import org.trapo.Administrativo
 import org.trapo.PlanEducativo
 
+import org.security.SecRole
+import org.security.SecUser
+import org.security.SecUserSecRole
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -55,6 +59,39 @@ class BootStrap {
         )       
 
         planNuevo.save()
+
+        /*
+        * Aquí se crean los roles para los distintos niveles de acceso a la aplicacion        
+        */
+        def userRole = SecRole.findByAuthority('ROLE_USER') ?: new SecRole(authority: 'ROLE_USER').save(failOnError: true)
+        def adminRole = SecRole.findByAuthority('ROLE_ADMIN') ?: new SecRole(authority: 'ROLE_ADMIN').save(failOnError: true)
+        /*
+        * Por ejemplo si el director puede acceder a ciertas secciones de la pagina se
+        * definira este rol para el
+        */
+        def rolDirector = SecRole.findByAuthority('ROL_DIRECTOR') ?: new SecRole(authority: 'ROL_DIRECTOR').save(failOnError: true)
+
+        def springSecurityService
+
+        // creamos el usuario
+        def adminUser = SecUser.findByUsername('admin') ?: new SecUser(
+                username: 'admin',
+                password: '123456',
+                enabled: true).save(failOnError: true)
+        // le ponemos el rol de admin
+        if (!adminUser.authorities.contains(adminRole)) {
+            SecUserSecRole.create adminUser, adminRole
+        }
+
+        // creamos otro usuario
+        def otroUsuario = SecUser.findByUsername('isaac') ?: new SecUser(
+                username: 'isaac',
+                password: '123456',
+                enabled: true).save(failOnError: true)
+        // le ponemos el rol de admin
+        if (!otroUsuario.authorities.contains(adminRole)) {
+            SecUserSecRole.create otroUsuario, adminRole
+        }
 
     }
 
