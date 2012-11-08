@@ -1,13 +1,13 @@
 package org.trapo
 
 class Reporte extends Formato{
-	Date periodoInicial
+	Date periodoInicio
 	Date periodoFinal
 	Usuario planificador
 
     static constraints = {   
         // tiene bugs todavia 	
-    	periodoInicial nullable: false, validator : {
+    	periodoInicio nullable: false, validator : {
             it >= new Date()
         }
         periodoFinal validator: { val, obj ->
