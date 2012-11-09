@@ -26,8 +26,12 @@
 				</a>
 				<p id="infoUsuario">
 					<sec:ifLoggedIn>
-						Bienvenido <sec:username/>
+						Bienvenido <sec:username/> <br>
+						<g:link controller='logout' action='index' id="cerrarSesion">Cerrar Sesión</g:link>
 					</sec:ifLoggedIn>
+					<sec:ifNotLoggedIn>
+						<g:link controller='login' action='auth'>Iniciar Sesión</g:link>
+					</sec:ifNotLoggedIn>
 				</p>
 			</div>
 

@@ -1,3 +1,27 @@
+/* Reglas de CSS  a Modificar*/
+#titulo{	
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+#titulo a{
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+}
+#infoUsuario{
+	display:inline;
+	float: right;
+	margin: 5px 10px;
+	color: #808e59;
+}
+#infoUsuario a{
+	text-decoration: none;
+	font-size: 12px;
+	float: right;
+	margin: 0px;	
+}
+
 /* FONT STACK */
 body,
 input, select, textarea {
@@ -57,22 +81,7 @@ body {
 #grailsLogo a img{
 
 }
-#titulo{	
-	display: inline-block;
-	margin: 0px;
-	padding: 0px;
-}
-#titulo a{
-	text-decoration: none;
-	font-size: 24px;
-	font-weight: bold;
-}
-#infoUsuario{
-	display:inline;
-	margin: 0px 460px;
-	font-weight: bold;
-	color: #808e59;
-}
+
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,
