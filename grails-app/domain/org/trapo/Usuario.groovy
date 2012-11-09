@@ -17,9 +17,8 @@ class Usuario {
     	numeroEmpleado unique: true, nullable: false
     	nombre nullable: false
     	apellidos nullable: false
-    	supervisor nullable: true
-        // modificar el view
-    	contrasena password: true // falta AES
+    	supervisor nullable: true        
+    	contrasena password: true
     }
 
     String toString(){

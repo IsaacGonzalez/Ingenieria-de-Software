@@ -94,3 +94,5 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.security.SecUser'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.security.SecUserSecRole'
 grails.plugins.springsecurity.authority.className = 'org.security.SecRole'
+
+// quizas cambairle el algoritmo de encryptacion a AES
